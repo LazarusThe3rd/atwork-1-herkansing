@@ -1187,13 +1187,49 @@ body {
   color: #7e85a0;
 }
 
-.contact-prompt {
+.url-search {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 15px 35px rgba(20, 20, 60, 0.1);
+  padding: 6px 6px 6px 24px;
+}
+
+.url-search .url-input {
+  border: none !important;
+  outline: none !important;
+  background: transparent;
+  box-shadow: none !important;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
   color: #7e85a0;
 }
 
-.href-prompt {
-  color: #ff3900;
+.button {
+  height: 52px;
+  padding: 0 1.75rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background-color: #ff3900;
+  color: #ffffff;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e63200;
 }
 
 @media (min-width: 600px) {
