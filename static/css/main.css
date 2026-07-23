@@ -603,15 +603,11 @@ body {
 }
 
 .comparison-section {
-  background: url(/static/images/Dark5.png);
-  background-size: cover;
+  background-image: url("../images/dark-desktop.png");
   background-repeat: no-repeat;
-  background-position: top;
-  min-height: 100vh;
-  color: #fcfdfe;
-  margin: 0;
-  padding: 0;
-  display: block;
+  background-position: center top;
+  background-size: 100% auto;
+  position: relative;
 }
 
 .even-more-section {
@@ -628,7 +624,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   font-family: "IBM Plex Mono", monospace;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-top: 0;
 }
 
@@ -676,14 +672,14 @@ body {
 
   .card-documentation {
     background-color: #111515;
-    background-image: url(/static/images/icon-documentation.png);
+    background-image: url(../images/icon-documentation.png);
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .card-api {
     background-color: #111515;
-    background-image: url(/static/images/icon-api.png);
+    background-image: url(../images/icon-api.png);
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -741,8 +737,7 @@ body {
 @media (min-width: 600px) {
   .use-less-tools {
     padding: 4rem 2rem;
-    background-color: #1a1a1a;
-    color: white;
+    color: rgb(255, 255, 255);
   }
 
   .subs-list {
@@ -756,7 +751,7 @@ body {
     align-items: flex-start;
     gap: 2rem;
     margin: 2rem auto;
-    color: #000;
+    color: #fff8f8;
     font-family: "IBM Plex Mono", monospace;
     font-size: 1.1rem;
   }
@@ -977,6 +972,8 @@ body {
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .taylor {
@@ -1118,6 +1115,18 @@ body {
   color: #ff0000;
 }
 
+.footer-wave {
+  background-image: url("../images/background-dark-wavy-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  height: 180px;
+  transform: scaleY(-1);
+  position: relative;
+  z-index: 1;
+  margin-top: -90px;
+}
+
 @media (min-width: 600px) {
   .testimonial {
     display: flex;
@@ -1148,22 +1157,6 @@ body {
   .michelangelo figcaption {
     padding: 0;
   }
-
-  .wavy {
-    width: 100%;
-    height: auto;
-  }
-
-  .wavy img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-
-.wavy {
-  z-index: 1;
-  transform: scaleY(-1);
 }
 
 .start-monitoring-instantly {
