@@ -641,8 +641,8 @@ body {
   background: #3d3c3c;
   color: white;
   padding: 3rem;
-  border-radius: 1rem;
-  width: 20rem;
+  border-radius: 0.5rem;
+  width: 25rem;
   height: auto;
 }
 
@@ -652,8 +652,8 @@ body {
   background: #3d3c3c;
   color: white;
   padding: 3rem;
-  border-radius: 1rem;
-  width: 20rem;
+  border-radius: 0.5rem;
+  width: 25rem;
   height: auto;
 }
 
@@ -661,7 +661,16 @@ body {
   .even-more-section {
     display: flex;
     align-items: center;
-    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 10px;
+
+    background: linear-gradient(
+      360deg,
+      rgba(17, 15, 29, 0.75) 50%,
+      rgba(17, 15, 34, 0.85) 50%
+    );
   }
   .cards-container {
     flex-direction: row;
@@ -670,18 +679,39 @@ body {
     padding: 1.6rem;
   }
 
-  .card-documentation {
+  .card-documentation,
+  .card-api {
+    width: 360px;
+    height: 130px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
     background-color: #111515;
-    background-image: url(../images/icon-documentation.png);
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:
+      border-color 0.25s ease,
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .card-documentation {
+    background-image: url("../images/icon-documentation.png");
   }
 
   .card-api {
-    background-color: #111515;
-    background-image: url(../images/icon-api.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../images/icon-api.png");
+  }
+
+  .card-documentation:hover,
+  .card-api:hover {
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
   }
 }
 
@@ -735,8 +765,36 @@ body {
 }
 
 @media (min-width: 600px) {
+  .compare-wave {
+    background-image: url("../images/background-dark-wavy-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    height: 180px;
+    transform: rotate(360deg);
+    position: relative;
+    z-index: 1;
+  }
+
+  .use-tools-section {
+    padding: 6rem;
+  }
+
+  .tools-card {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+    border-radius: 8px;
+    background: linear-gradient(
+      180deg,
+      rgba(34, 31, 71, 0.75) 0%,
+      rgba(22, 20, 47, 0.85) 100%
+    );
+
+    border: 1px solid rgba(95, 88, 170, 0.3);
+  }
+
   .use-less-tools {
-    padding: 4rem 2rem;
     color: rgb(255, 255, 255);
   }
 
@@ -1116,7 +1174,7 @@ body {
   color: #ff0000;
 }
 
-.footer-wave {
+.wave {
   background-image: url("../images/background-dark-wavy-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center top;
