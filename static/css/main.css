@@ -349,6 +349,12 @@ body {
   }
 }
 
+.top-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .uptime-check {
   display: flex;
   flex-direction: column;
@@ -376,6 +382,7 @@ body {
 .learn-more {
   text-decoration: none;
   color: #ff3900;
+  padding: 1rem;
 }
 
 .notifications-for-everything {
@@ -424,52 +431,85 @@ body {
   box-shadow: #c7c5c4 0.2rem 0.2rem;
   font-weight: 500;
   font-size: 1rem;
-  color: #7a00fb;
+  color: #4f80e1;
 }
 
 @media (min-width: 600px) {
-  .uptime-check {
-    display: flex;
-    flex-direction: row;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 3rem;
+  .top-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
-    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .uptime-check h2 {
+  .feature--uptime {
+    grid-column: 1 / -1;
+  }
+
+  .feature--uptime {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .feature-con {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .feature--uptime h2 {
     font-size: 2.5rem;
   }
 
-  .uptime-check p {
+  .feature--uptime p {
     font-size: 1.2rem;
   }
 
-  .status {
-    flex: 1;
-    min-width: 500px;
+  .feature--uptime .feature-con {
+    flex: 0 0 35%;
   }
 
-  .status img {
+  .feature--uptime img {
+    flex: 0 0 65%;
+    width: 100%;
+  }
+
+  .feature--notifications {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 580px;
+  }
+
+  .feature--notifications img {
     width: 100%;
     height: auto;
+    order: -1;
+    margin-bottom: 2rem;
   }
 
-  .notifications-for-everything {
-    flex-direction: row;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 3rem;
-    gap: 3rem;
-    align-items: center;
+  .feature--certificates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
   }
 
-  .notifications-for-everything h2 {
+  .feature--certificates img {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .feature--notifications h2 {
     font-size: 2.5rem;
   }
 
-  .notifications-for-everything p {
+  .feature--notifications p {
     font-size: 1.2rem;
   }
 
@@ -490,7 +530,11 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 5rem;
-    padding: 5rem;
+    padding: 7rem;
+    background: #f6f9fc;
+    border: 1px solid #edf0f7;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
   }
 
   .notification-rule legend {
@@ -513,8 +557,31 @@ body {
     width: 25rem;
     font-size: 1rem;
     font-family: "IBM Plex Mono", monospace;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     box-shadow: #c7c5c4 0.2rem 0.2rem;
+    cursor: pointer;
+  }
+
+  select {
+    appearance: base-select;
+  }
+
+  ::picker(select) {
+    appearance: base-select;
+  }
+
+  select::picker-icon {
+    font-size: 0.7rem;
+    align-items: center;
+    transition: 150ms ease;
+  }
+
+  select:open::picker-icon {
+    rotate: 180deg;
+  }
+
+  select option {
+    padding: 0.25em;
   }
 }
 
@@ -537,7 +604,6 @@ body {
   border-radius: 0.75rem;
   margin: 0.625rem;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
-  gap: 1.5rem;
   position: relative;
   z-index: 1;
 }
@@ -557,7 +623,7 @@ body {
 
 @media (min-width: 600px) {
   .features {
-    padding: 4rem 2rem;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -575,7 +641,6 @@ body {
   .feature-card {
     display: flex;
     flex-direction: column;
-    padding: 2.5rem;
     gap: 1.5rem;
   }
 
@@ -593,12 +658,6 @@ body {
     width: 100%;
     height: auto;
     margin-top: auto;
-  }
-
-  .feature-card:nth-child(5) {
-    grid-column: 1;
-    max-width: 680px;
-    margin: 0 auto;
   }
 }
 
@@ -1174,7 +1233,7 @@ body {
   color: #ff0000;
 }
 
-.wave {
+.footer-wave {
   background-image: url("../images/background-dark-wavy-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center top;
