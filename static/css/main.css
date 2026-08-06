@@ -169,7 +169,7 @@ body {
   flex-direction: column;
   gap: 50px;
   align-items: center;
-  padding: 40px;
+  padding-top: 5rem;
 }
 
 .stat-item {
@@ -328,24 +328,61 @@ body {
   .stats-container {
     display: flex;
     flex-direction: row;
-    gap: 15rem;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
+    padding-bottom: 2rem;
+  }
+
+  .stats-list {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    list-style: none;
+    padding: 0;
   }
 
   .stat-item {
-    flex: 0 1 auto;
-    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .stat-number {
-    font-size: 1rem;
-    padding: 1rem 2rem;
+    display: inline-flex;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e7edf7;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   }
 
-  .stat-text {
-    font-size: 0.9rem;
+  .stat-number span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8rem;
+    height: 2rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.2rem;
+    color: #ff3900;
+    border-right: 1px solid rgba(148, 163, 184, 0.18);
+    perspective: 500px;
+  }
+
+  .stat-number span:last-child {
+    border-right: none;
+  }
+
+  .digit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.2rem;
+    height: 3.5rem;
+    border-right: 1px solid rgba(148, 163, 184, 0.18);
+    transform-style: preserve-3d;
+    transform-origin: center center;
   }
 }
 
@@ -592,7 +629,6 @@ body {
 
 .features {
   overflow: hidden;
-  background-image: url(/static/images/background-dark-wavy-desktop.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   padding: 2rem;
