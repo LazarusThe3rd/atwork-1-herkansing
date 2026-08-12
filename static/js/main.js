@@ -48,3 +48,12 @@ gsap.utils.toArray(".feature-card").forEach((card) => {
     },
   });
 });
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  const isOpen = navMenu.classList.toggle("open");
+
+  hamburger.setAttribute("aria-expanded", isOpen);
+});
