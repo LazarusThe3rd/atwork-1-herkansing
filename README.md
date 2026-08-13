@@ -1,47 +1,56 @@
-# project-1- Alazar
+# @work 1 — Oh Dear Recreation
 
-http://127.0.0.1:5500/index.html
+## Description
 
-## Todo's
+A responsive recreation of the Oh-Dear homepage based on the provided Figma design. This project was created as part of the @work 1 herkansing assignment at Arteveldehogeschool.
 
-### Mobile
+## Technologies
 
-- [x] header
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- GSAP
+- Lenis
 
-- [x] hero
+## Features
 
-- [x] clients
+- Responsive desktop and mobile layout
+- Hamburger navigation menu
+- Animated counters
+- Hover effects on links and cards
+- Responsive navigation
+- Semantic HTML structure
+- Accessible form controls and navigation
+- Local images and assets
 
-- [x] counters
+## Responsive Design
 
-- [x] services
+The website is designed for both desktop and mobile screen sizes, following the provided Figma designs as closely as possible.
 
-- [][x] pricing
+## Accessibility
 
-- [ ][x] our-word
+The page uses semantic HTML elements, meaningful image alternatives where appropriate, accessible navigation, and labelled form controls.
 
-- [ ][x] cta
+## Online Version
 
-- [ ][x] footer
+[View the website on GitHub Pages](https://lazarusthe3rd.github.io/atwork-1-herkansing/)
 
-### Desktop
+## Project Structure
 
-- [ ][x] media queries
+```text
+app/
+├── static/
+│   ├── images/
+│   ├── css/
+│   └── js/
+├── index.html
+├── robots.txt
+└── README.md
 
-- [ ][x] header
+docs/
+└── screencast.mp4
+```
 
-- [ ][x] hero
+## Notes
 
-- [ ][x] clients
-
-- [ ] [x]counters
-
-- [ ] [x]services
-
-- [ ] [x]pricing
-
-- [ ][x] our-word
-
-- [ ][x] cta
-
-- [ ] [x]footer
+This project is a recreation of the Oh Dear homepage for educational purposes and is not intended for use as a commercial website or public portfolio project.

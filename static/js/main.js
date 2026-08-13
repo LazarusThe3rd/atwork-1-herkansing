@@ -9,7 +9,7 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-//slot machine//
+//slot machine animation//
 
 const digits = document.querySelectorAll(".digits");
 
@@ -49,6 +49,7 @@ gsap.utils.toArray(".feature-card").forEach((card) => {
   });
 });
 
+// Nav-bar
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
